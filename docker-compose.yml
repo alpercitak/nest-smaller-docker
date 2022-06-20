@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app-first:
+    image: nest-smaller-docker-app-first
+    build:
+      context: .
+      dockerfile: Dockerfile.first
+      target: build
+    ports:
+      - 3000:3000
