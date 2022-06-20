@@ -8,3 +8,12 @@ services:
       target: build
     ports:
       - 3000:3000
+
+  app-second:
+    image: nest-smaller-docker-app-second
+    build:
+      context: .
+      dockerfile: Dockerfile.second
+      target: deploy
+    ports:
+      - 4000:3000
