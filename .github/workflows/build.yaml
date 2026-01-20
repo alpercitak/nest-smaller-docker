@@ -17,13 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - run: corepack enable
-
       - uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: pnpm
+          cache: yarn
 
-      - run: pnpm i --frozen-lockfile
+      - run: yarn i --frozen-lockfile
 
-      - run: pnpm build
+      - run: yarn build
