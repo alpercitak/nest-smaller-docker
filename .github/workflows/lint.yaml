@@ -8,8 +8,25 @@ on:
 
 jobs:
   lint:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
     steps:
-      - uses: ./.github/actions/setup.yaml
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: true
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - run: pnpm i --frozen-lockfile
 
       - run: pnpm lint
