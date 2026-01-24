@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.3.3
+        version: 3.3.3
+      '@eslint/js':
+        specifier: ^9.39.2
+        version: 9.39.2
       '@nestjs/common':
         specifier: ^11.0.0
         version: 11.1.12(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -63,6 +69,9 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.0.0
         version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2))(eslint@9.39.2)(prettier@2.8.8)
+      globals:
+        specifier: ^17.1.0
+        version: 17.1.0
       jest:
         specifier: ^30.0.0
         version: 30.2.0(@types/node@16.18.126)(ts-node@10.9.2(@types/node@16.18.126)(typescript@4.9.5))
@@ -78,9 +87,6 @@ importers:
       ts-jest:
         specifier: ^27.0.3
         version: 27.1.5(@babel/core@7.28.6)(@types/jest@30.0.0)(babel-jest@27.5.1(@babel/core@7.28.6))(jest@30.2.0(@types/node@16.18.126)(ts-node@10.9.2(@types/node@16.18.126)(typescript@4.9.5)))(typescript@4.9.5)
-      ts-loader:
-        specifier: ^9.2.3
-        version: 9.5.4(typescript@4.9.5)(webpack@5.104.1)
       ts-node:
         specifier: ^10.0.0
         version: 10.9.2(@types/node@16.18.126)(typescript@4.9.5)
@@ -1812,6 +1818,10 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
+  globals@17.1.0:
+    resolution: {integrity: sha512-8HoIcWI5fCvG5NADj4bDav+er9B9JMj2vyL2pI8D0eismKyUvPLTSs+Ln3wqhwcp306i73iyVnEKx3F6T47TGw==}
+    engines: {node: '>=18'}
+
   gopd@1.2.0:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
@@ -2646,10 +2656,6 @@ packages:
     resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
 
-  source-map@0.7.6:
-    resolution: {integrity: sha512-i5uvt8C3ikiWeNZSVZNWcfZPItFQOsYTUAOkcUPGd8DqDy1uOUikjt5dG+uRlwyvR108Fb9DOd4GvXfT0N2/uQ==}
-    engines: {node: '>= 12'}
-
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
@@ -2812,13 +2818,6 @@ packages:
         optional: true
       esbuild:
         optional: true
-
-  ts-loader@9.5.4:
-    resolution: {integrity: sha512-nCz0rEwunlTZiy6rXFByQU1kVVpCIgUpc/psFiKVrUwrizdnIbRFu8w7bxhUF0X613DYwT4XzrZHpVyMe758hQ==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      typescript: '*'
-      webpack: ^5.0.0
 
   ts-node@10.9.2:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
@@ -5053,6 +5052,8 @@ snapshots:
 
   globals@14.0.0: {}
 
+  globals@17.1.0: {}
+
   gopd@1.2.0: {}
 
   graceful-fs@4.2.11: {}
@@ -6044,8 +6045,6 @@ snapshots:
 
   source-map@0.7.4: {}
 
-  source-map@0.7.6: {}
-
   sprintf-js@1.0.3: {}
 
   stack-utils@2.0.6:
@@ -6198,16 +6197,6 @@ snapshots:
       '@babel/core': 7.28.6
       '@types/jest': 30.0.0
       babel-jest: 27.5.1(@babel/core@7.28.6)
-
-  ts-loader@9.5.4(typescript@4.9.5)(webpack@5.104.1):
-    dependencies:
-      chalk: 4.1.2
-      enhanced-resolve: 5.18.4
-      micromatch: 4.0.8
-      semver: 7.7.3
-      source-map: 0.7.6
-      typescript: 4.9.5
-      webpack: 5.104.1
 
   ts-node@10.9.2(@types/node@16.18.126)(typescript@4.9.5):
     dependencies:
