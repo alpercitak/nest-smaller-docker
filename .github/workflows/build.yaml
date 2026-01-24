@@ -1,32 +1,11 @@
 name: build
-
 on:
   push:
     branches: [main]
   pull_request:
-    branches: ["**"]
 
 jobs:
-  build:
-    timeout-minutes: 10
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          persist-credentials: true
-
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          cache: "pnpm"
-
-      - run: pnpm i --frozen-lockfile
-
-      - run: pnpm build
+  call-setup:
+    uses: ./.github/workflows/_setup.yaml
+    with:
+      run-command: pnpm build
