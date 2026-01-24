@@ -1,12 +1,10 @@
 name: setup
-
 on:
   workflow_call:
     inputs:
       run-command:
         required: true
         type: string
-
 jobs:
   run:
     runs-on: ubuntu-latest

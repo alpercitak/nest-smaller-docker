@@ -3,9 +3,8 @@ on:
   push:
     branches: [main]
   pull_request:
-
 jobs:
-  call-setup:
+  setup:
     uses: ./.github/workflows/_setup.yaml
     with:
       run-command: pnpm test
