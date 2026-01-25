@@ -1,4 +1,4 @@
-FROM node:18-alpine AS build
+FROM node:25-alpine AS build
 
 RUN apk add --no-cache curl bash
 RUN npm install -g pnpm
@@ -18,7 +18,7 @@ RUN pnpm prune --prod
 
 RUN /usr/local/bin/node-prune
 
-FROM node:18-alpine AS deploy
+FROM node:25-alpine AS deploy
 
 WORKDIR /usr/src/app
 
