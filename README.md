@@ -5,6 +5,10 @@
 ![Test](https://github.com/alpercitak/nest-smaller-docker/actions/workflows/test.yaml/badge.svg) 
 ![License](https://img.shields.io/github/license/alpercitak/nest-smaller-docker)
 
+Optimized multi-stage Docker configuration for NestJS using pnpm to minimize container image size.
+
+Companion repository for the Medium article [Nest.js — Reducing Docker container size](https://medium.com/@alpercitak/nest-js-reducing-docker-container-size-4c2672369d30)
+
 ## Installation
 
 ```bash
